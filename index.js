@@ -11,6 +11,20 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+app.get('/politika', (req, res) => {
+  // Здесь можно отправить HTML страницу с вашей политикой конфиденциальности
+  res.sendFile(path.join(__dirname, 'public', 'politika.html'));
+});
+
+app.get('/soglashenie', (req, res) => {
+  // Здесь можно отправить HTML страницу с вашей политикой конфиденциальности
+  res.sendFile(path.join(__dirname, 'public', 'soglashenie.html'));
+});
+
+app.use((req, res) => {
+  res.sendFile(path.join(__dirname, 'public', '404.html'));
+});
+
 // Start the server
 const PORT = process.env.PORT || 3500;
 app.listen(PORT, () => {
