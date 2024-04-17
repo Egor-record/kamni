@@ -40,7 +40,10 @@ app.use(bodyParser.json());
 // Define a route to serve your HTML file
 app.post('/send-form', (req, res) => {
   const { name, email, phone, textarea } = req.body; // Extract data from request body
-  sendMessageToUser(128490476, `Новая заявка! Данные клиента: ${name}, ${email}, ${phone}, ${textarea}`)
+  [128490476].forEach(chatID => {
+    sendMessageToUser(chatID, `Новая заявка! Данные клиента: ${name}, ${email}, ${phone}, ${textarea}`)
+  })
+ 
   res.json({ status: "Ok" });
 });
 
