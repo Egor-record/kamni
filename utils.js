@@ -1,6 +1,6 @@
 require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
-const bot = new TelegramBot(process.env.TELEGRAM_BOT, { polling: true });
+const bot = new TelegramBot(process.env.TELEGRAM_BOT, { polling: false });
 
 const routes = [
     { url: '/', priority: 1.0 },
@@ -8,12 +8,12 @@ const routes = [
     { url: '/soglashenie', priority: 0.8 }
 ];
 
-bot.on('message', (msg) => {
-    const chatId = msg.chat.id; // Extract the chat ID from the message object
+// bot.on('message', (msg) => {
+//     const chatId = msg.chat.id; // Extract the chat ID from the message object
 
-    // Respond to the user
-    bot.sendMessage(chatId, 'Hello! You wrote to the bot. The chat ID: ' + chatId);
-});
+//     // Respond to the user
+//     bot.sendMessage(chatId, 'Hello! You wrote to the bot. The chat ID: ' + chatId);
+// });
 
 function sendMessageToUser(chatId, message) {
     bot.sendMessage(chatId, message)
