@@ -41,7 +41,7 @@ app.use(bodyParser.json());
 app.post('/send-form', (req, res) => {
   const { name, email, phone, textarea } = req.body; // Extract data from request body
   // 128490476
-  [1137797910, 483090583].forEach(chatID => {
+  [1137797910, 6336404889].forEach(chatID => {
     sendMessageToUser(chatID, `Новая заявка! Данные клиента: ${name}, ${email}, ${phone}, ${textarea}`)
   })
  
