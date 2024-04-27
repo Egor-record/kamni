@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 
 
 app.get('/politika', (req, res) => {
-  // Здесь можно отправить HTML страницу с вашей политикой конфиденциальности
   res.sendFile(path.join(__dirname, 'public', 'politika.html'));
 });
 

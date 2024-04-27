@@ -443,6 +443,7 @@ APP = {
                 data: form.serialize(),
                 success: function(msg) {
                     if (msg.status === "Ok") {
+                        richGoal('Отправкаформы')
                         $('.thank-you-modal, #modal-overlay').removeClass('closed');
                     }
                     $('.js-close-button-thanks-card, #modal-overlay').click(function() {

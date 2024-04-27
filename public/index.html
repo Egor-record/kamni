@@ -29,14 +29,14 @@
 				</div>
 				<div class="col-6 col-lg-4">
 					<p class="header_address g-color-black d-md-block d-none"> 
-						 <a href="index.html#section-map" class="g-color-black">👉 Лен. область,  Ломоносовский район, Кипень, Волковицы, СНТ Орбита-3</a><br>
+						 <a href="index.html#section-map"  onclick="richGoal('Ленобластьшапка')" class="g-color-black">👉 Лен. область,  Ломоносовский район, Кипень, Волковицы, СНТ Орбита-3</a><br>
 						 <span class="js-copy-coordinates" style="cursor: pointer;"><i class="fa fa-clone" aria-hidden="true"></i> 59.641768, 29.824277</span>
 					</p>
 				</div>
 				<div class="col-6 col-lg-4"> 
 					<a class="header_phone g-color-black" href="tel:+79052500876"><strong> +7 (905) 250-08-76</strong> </a>
 					<p class="header_address g-color-black d-lg-none d-xl-none"> 
-						 <a href="index.html#section-map" class="g-color-black">👉 Лен. область,  Ломоносовский район, Кипень, Волковицы, СНТ Орбита-3</a></p>
+						 <a href="index.html#section-map"  onclick="richGoal('Ленобластьшапка')" class="g-color-black">👉 Лен. область,  Ломоносовский район, Кипень, Волковицы, СНТ Орбита-3</a></p>
 					<p class="d-lg-none"><span class="js-copy-coordinates" style="cursor: pointer;"><i class="fa fa-clone" aria-hidden="true"></i> 59.641768, 29.824277</span></p>
 
 				</div>
@@ -145,10 +145,10 @@
 						<p>В процессе изготовления мы используем крошку настоящих камней измельченных в мелкую фракцию, что позволяет изделию выглядеть натурально.</p>
 						<p>Для вашего удобства есть возможность <strong>видеозвонка</strong> для демонстрации, камень будет находиться в естественных природных условиях, ландшафт будет приближен к вашему дачному массиву.</p>
 						<div class="text-center mb-3">
-							<a href="https://wa.me/+79052500876?text=Запись%20на%20видео%20звонок" target="_blank" class="btn btn-success">
+							<a href="https://wa.me/+79052500876?text=Здравствуйте,%20я%20хочу%20записаться%20на%20видеозвонок%20просмотр%20камня,%20мне%20удобно" target="_blank" onclick="richGoal('WhatsApp')" class="btn btn-success">
 								<i class="fa fa-phone" aria-hidden="true"></i> Согласовать видеозвонок в WhatsApp
 							</a>
-							<a href="https://t.me/dekorativniekamni?text=Запись%20на%20видео%20звонок" target="_blank" class="btn btn-primary mt-3 mt-lg-0 ml-lg-3">
+							<a href="https://t.me/dekorativniekamni?text=Здравствуйте,%20я%20хочу%20записаться%20на%20видеозвонок%20просмотр%20камня,%20мне%20удобно" target="_blank" onclick="richGoal('Telegram')"  class="btn btn-primary mt-3 mt-lg-0 ml-lg-3">
 								<i class="fa fa-paper-plane" aria-hidden="true"></i>
 								Согласовать видеозвонок в Telegram
 							  </a>
@@ -490,8 +490,8 @@
 						<span aria-hidden="true" style="font-size: 40px;">&times;</span> </button>
 				</div>
 				<div class="modal-body">
-					<h5 class="modal-title" id="exampleModalCenterTitle">Спасибо за заявку!</h5>
-					<p class="g-color-black"> Мы перезвоним вам в течение 30 минут</p>
+					<h5 class="modal-title" style="font-size: 42px;" id="exampleModalCenterTitle">Спасибо за заявку!</h5>
+					<p class="g-color-black text-center" style="font-size: 20px;"> Мы свяжемся с Вами как можно раньше</p>
 				</div>
 			</div>
 		</div>
@@ -611,6 +611,11 @@
  </script>
  <noscript><div><img src="https://mc.yandex.ru/watch/97079904" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
+ <script>
+	function richGoal(nameOfGoal) {
+		console.log("goal")
+		return ym(97079904,'reachGoal', nameOfGoal)
+	}
+ </script>
 </body>
-
 </html>
