@@ -27,7 +27,7 @@ app.get('/soglashenie', (req, res) => {
 
 // Serve sitemap.xml
 app.get('/sitemap.xml', (req, res) => {
-  const sitemap = generateSitemap(routes);
+  const sitemap = generateSitemap();
   res.header('Content-Type', 'application/xml');
   res.send(sitemap);
 });
